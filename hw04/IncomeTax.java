@@ -25,7 +25,7 @@ public class IncomeTax {
         System.out.print("Enter an int giving the number of thousands:"); //asking user to enter an integer
         taxint$ = myScanner.nextInt(); //
         taxint2$ = taxint$*1000; //putting the number in thousands
-        if (taxint$ < 20) { //if the int is below 20
+        if (taxint$ > 0 && taxint$ < 20) { //if the int is above 0 and below 20
             System.out.println("The tax rate on $"+taxint2$+" is 5%, and the tax is $"+taxint2$*taxRate1+".");
         
         } else if (taxint$ >= 20 && taxint$ < 40) { //if the int is between 20 and 40
