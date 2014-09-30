@@ -15,9 +15,9 @@ public class RandomGames {
     myScanner = new Scanner (System.in);
     
     int numberR, numberC, numberc, totalC, numberP, cardP, card1, card2;
-    string card1 = "";
-    string card2 = "";
-    string Ace, King, Queen, Jack;
+    String card1 = "";
+    String card2 = "";
+    String Ace, King, Queen, Jack;
     
     numberR = (int)(Math.random()*((37-0)+1)); //random number for roulette
     numberC = (int)(Math.random()*((7-0)+1)); //random number for craps dice 1
