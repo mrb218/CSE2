@@ -15,8 +15,8 @@ public class RandomGames {
     myScanner = new Scanner (System.in);
     
     int numberR, numberC, numberc, totalC, numberP, cardP, card1, card2;
-    String card1 = "";
-    String card2 = "";
+    String card3 = "";
+   
     String Ace, King, Queen, Jack;
     
     numberR = (int)(Math.random()*((37-0)+1)); //random number for roulette
@@ -24,7 +24,7 @@ public class RandomGames {
     numberc = (int)(Math.random()*((7-0)+1)); //random number for craps dice 2
     totalC = numberC + numberc;//total value from two dice
     numberP = (int)(Math.random()*((11-0)+1));
-    cardP = (Math.random()*((4-0)+1)); 
+    cardP = (int)(Math.random()*((4-0)+1)); 
     card1 = (int)(Math.random()*((14-2)+1));
     card2 = (int)(Math.random()*((4-0)+1)); //the card number
     
@@ -66,48 +66,45 @@ public class RandomGames {
                     case 10:
                     case 11:
                         {
-                        card1 = "Ace";
+                        card3 = "Ace";
                         }
                     break;
                     case 12: 
                         {
-                        card1 = "King";
+                        card3 = "King";
                     }
                     break;
                     case 13: {
-                        card1 = "Queen";
+                        card3 = "Queen";
                 }
                     break;
                     case 14: {
-                        card1 = "Jack";
+                        card3 = "Jack";
                     }
                     break;
                 }
             
                 switch(card2){
                     case 1: {
-                        System.out.println(""+card1+" of diamonds.");
+                        System.out.println(""+card3+" of diamonds.");
                     }
                     break;
                     case 2: {
-                        System.out.println(""+card1+" of hearts.");
+                        System.out.println(""+card3+" of hearts.");
                     }
                     break;
                     case 3:
                     {
-                        System.out.println(""+card1+" of spades.");
+                        System.out.println(""+card3+" of spades.");
                     }
                     break;
                     case 4:
                         {
-                        System.out.println(""+card1+" of clubs.");
+                        System.out.println(""+card3+" of clubs.");
                     }
                         
                     break;
-                   
                 
-            
-            
             default: 
             {
                 System.out.println(""+game+" is not one of 'R', 'r', 'C', 'c', 'P', or 'p'");
@@ -115,8 +112,8 @@ public class RandomGames {
                 break;
             }
             }
-            
-        }
+        } 
+        
         
     
         }
