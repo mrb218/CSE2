@@ -154,12 +154,8 @@ public static char getInput(Scanner scan2, String m, String n){
         return getInput(scan2, m, n); //return so that the user can enter one character
         
         }
-    
-    
-    
+
 }
-     
-     
     }
 	
 	
