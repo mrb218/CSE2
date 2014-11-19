@@ -5,7 +5,7 @@
 
 
 import java.util.Scanner;
-public class FindDuplicates{
+public class FindDuplicates{  //info Chen gave us
     public static void main(String [] arg){
         Scanner scan=new Scanner(System.in);
         int num[]=new int[10];
@@ -40,7 +40,7 @@ public class FindDuplicates{
             }while(answer.equals("Y") || answer.equals("y"));
         }
 
-    public static String listArray(int num[]){
+    public static String listArray(int num[]){ //method Chen gave us
         String out="{";
         for(int j=0;j<num.length;j++){
             if(j>0){
@@ -52,10 +52,10 @@ public class FindDuplicates{
     return out;
   }
   
-  public static boolean hasDups(int [] user){
+  public static boolean hasDups(int [] user){ //determines if there are duplicates or not
       for (int a = 0; a < user.length; a++){
           for (int b = 0; b < user.length; b++){
-              if(user[a] == user[b] && a!=b){
+              if(user[a] == user[b] && a!=b){ //one of the numbers the user inputs needs to be equal to another
                   return true;
               }
           }
@@ -63,20 +63,20 @@ public class FindDuplicates{
       return false;
   }
   
-  public static boolean exactlyOneDup(int [] user2){
+  public static boolean exactlyOneDup(int [] user2){ //determines if there is exactly one duplicate or not
       Boolean answer = false;
       int counter = 0;
       for (int a = 0; a < user2.length; a++){
           for (int b = 1+a; b < user2.length; b++){
-              if(user2[a] == user2[b]){
-                  counter++;
+              if(user2[a] == user2[b]){  //users input needs to be equal
+                  counter++; //keeps on cycling
               }
           }
       }
-     if (counter == 1){
+     if (counter == 1){ //if the counter is only 1, then there is only one duplicate
          return answer = true;
      }
-     return answer;
+     return answer; //otherwise there is more than one duplicate
   }
  
   
