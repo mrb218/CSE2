@@ -29,29 +29,29 @@ import java.util.Scanner;
             int negativeone = -1;
             */
       
-            
+            //making each suit equal to a string
             String one = "Diamonds";
             String two = "Hearts";
             String three = "Clubs";
             String four = "Spades";
             
-    for(int i=0; i<4; i++){ 
+    for(int i=0; i<4; i++){ //needs to be 5 random numbers
         
-            int random1 = (int)(Math.random()*((4-0)+1));
+            int random1 = (int)(Math.random()*((4-0)+1)); //random number for the suits
             if(random1 == 1){ //determines suit Diamonds
             String names[] =  {"A of ", "K of ","Q of ","J of ","10 of ","9 of ","8 of ","7 of ","6 of ","5 of ","4 of ","3 of ","2 of "};
-               int random2 = (int)(Math.random()*((14-0)+2));
-                if(random2 == 2){
-                    one = names[1] + one;
+               int random2 = (int)(Math.random()*((14-0)+2)); //random number for the card face
+                if(random2 == 2){ //if the random number is 2
+                    one = names[1] + one; //change the string of Diamonds to A (from the array) of Diamonds
                 }
                 else if(random2 == 3){
-                    one = names[2] + one;
+                    one = names[2] + one; //change the string of Diamonds to K (from the array) of Diamonds
                 }
                 else if(random2 == 4){
-                    one = names[3] + one;
+                    one = names[3] + one;//change the string of Diamonds to Q (from the array) of Diamonds
                 }
                 else if(random2 == 5){
-                    one = names[4] + one;
+                    one = names[4] + one; //change the string of Diamonds to J (from the array) of Diamonds
                 }
                 else if(random2 == 6){
                     one = names[5] + one;
@@ -78,13 +78,13 @@ import java.util.Scanner;
                     one = names[12] + one;
                 }
                 else if(random2 == 14){
-                    one = names[13] + one;
+                    one = names[13] + one; //change the string of Diamonds to 2 (from the array) of Diamonds
                 }
                  System.out.println(one);
             }
             if(random1 == 2){ //determines suit Hearts
             String names[] =  {"A of ", "K of ","Q of ","J of ","10 of ","9 of ","8 of ","7 of ","6 of ","5 of ","4 of ","3 of ","2 of "};
-                int random2 = (int)(Math.random()*((14-0)+2));
+                int random2 = (int)(Math.random()*((14-0)+2)); //random number for the card face
                 if(random2 == 2){
                     two = names[1] + two;
                 }
@@ -128,7 +128,7 @@ import java.util.Scanner;
             }
             if(random1 == 1){ //determines suit Clubs
             String names[] =  {"A of ", "K of ","Q of ","J of ","10 of ","9 of ","8 of ","7 of ","6 of ","5 of ","4 of ","3 of ","2 of "};
-                int random2 = (int)(Math.random()*((14-0)+2));
+                int random2 = (int)(Math.random()*((14-0)+2)); //random number for the card face
                 if(random2 == 2){
                     three = names[1] + three;
                 }
@@ -172,7 +172,7 @@ import java.util.Scanner;
             }
             if(random1 == 1){ //determines suit spades
             String names[] =  {"A of ", "K of ","Q of ","J of ","10 of ","9 of ","8 of ","7 of ","6 of ","5 of ","4 of ","3 of ","2 of "};
-                int random2 = (int)(Math.random()*((14-0)+2));
+                int random2 = (int)(Math.random()*((14-0)+2)); //random number for the card face
                 if(random2 == 2){
                     four = names[1] + four;
                 }
