@@ -47,7 +47,8 @@ public class Enigma1{
  *    Hint: What kinds of input are unacceptable? What kinds of
  *        acceptable input don't produce the correct answer?
  *  Need to change the scanner so that the input can actually be used
- *  It only works for the numbers 7, 41, 14, 33, and 60 so it is not very reliable, it should have an else statement
+ *  It only works for the numbers 7, 41, 14, 33, and 60 so it is not very reliable, it needed an else statement
+ * in order for the if statements to work, you need to round the decimal to two places
  * the percent was not initialized- you should determine percent before the
  * if statement.
  * 
