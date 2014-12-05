@@ -21,22 +21,23 @@ import java.util.Scanner;
         
     public static int getInt(Scanner scan) {
     	
-    	System.out.print("Enter an int: ");
+    	System.out.println("Enter an int: ");
     	int output = 0;
-    	Scanner scan2 = new Scanner(System.in);
+    	scan = new Scanner(System.in); //make a new scanner
     	
     	
-    	if(scan.hasNextInt){ //myscanner = the input
-    		
-    		output = myScanner;
+    	
+    	if(scan.hasNextInt()){ //myscanner = the input
+    		int scan2 = scan.nextInt(); 
+    		output = scan2; //return the scanner
     		
     	}
     	else{
     		System.out.println("You did not enter an int.");
-    		output = getInt(scan2);
+    		output = getInt(scan);
     		
     	}
-    	
+    return output;
     }
     
     public static boolean ascending(int first, int second, int third){ //the ascending method
@@ -47,10 +48,11 @@ import java.util.Scanner;
     	else {
     		output = false;
     	}
+    	return output;
     }
 	
 	public static int larger(int first, int second){ //the larger method
-		int result;
+		int result = 0;
 		if (first > second){ //option 1
 			result = first;
 		}

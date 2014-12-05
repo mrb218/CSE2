@@ -13,7 +13,7 @@ public class ArrayMath{
       v[],
       u[]={2.3, 12, 14};
     v=addArrays(x,y);
-    /*System.out.println(display(x)+" \n  + " + display(y) + "\n   = " +display(v));
+    System.out.println(display(x)+" \n  + " + display(y) + "\n   = " +display(v));
     System.out.println(display(x)+" \n  + " + display(z) + "\n   = " 
                          +display(addArrays(x,z)));
     System.out.println("It is " + equals(x,y)+" that "+display(x)+
@@ -22,7 +22,7 @@ public class ArrayMath{
                        " == "+display(w));
     System.out.println("It is " + equals(u,z)+" that "+display(u)+
                        " == "+display(z));
-*/
+
   }
   
   public static String display(double [] x){
@@ -36,52 +36,64 @@ public class ArrayMath{
     return out+"}";
   }
   
-  public static double equals(double [] x, double [] y){
-      double [] number1 = double [number1.length];
-      double [] number2 = double [number2.length];
-      if (number1.length == number2.length){ //same length
-          if(number1[x] == number2[y]){
-              System.out.println("True");
-          }//closes if statement
-         
-      }//closes outer if statement
-      
+  public static Boolean equals(double [] x, double [] y){
+      int temp;
+      temp = 1;
+      if (x.length == y.length){ //same length
+          for(int a = 0; a<x.length; a++){
+              if(x[a]!=y[a]){
+              temp++;
+          }
+      }
+      if(temp==0){
+          return true;
+      }
+      else{
+          return false;
+      }
+  }
+  else{
+      return false;
+  }
   }
   
-  public static int addArrays(int x[], int y[]){
-    
-    int [] sum = new int [sum.length];
-    int [] numbers1 = new int [numbers1.length];
-    int [] numbers2 = new int [numbers2.length];
-    
-    
-    int zeros = 0;
-        if(numbers1.length == numbers2.length){
-    
+  public static double[] addArrays(double x[], double y[]){
+    int temp2;
+    temp2 =1;
+   double end[] = new double[0];
+        if(x.length == y.length){
+            end = new double[x.length];
+            for(int a = 0; a<y.length; a++){
+                end[a] = x[a] + y[a];
+            }
         }
-        else if(number1.length > number2.length){
-            zeros = number1.length - number2.length; //number of extra zeros
+         if(x.length > y.length){
+            end = new double[x.length];
+             for(int a = 0; a<y.length; a++){
+                end[a] = x[a] + y[a];
+                temp2++;
+            } //number of extra zeros
             //add zeros(number of zeros) to the end of number2
-            return;
+            for(int b = temp2+1; b<x.length; b++){
+                end[b] = x[b];
+            }
         }
-        else{
-            zeros = number2.length - number1.length; //number of extra zeros in number2
-            //add zeros to the end of number1
-            return;
-        }
+         if(x.length < y.length){
+            end = new double[x.length];
+             for(int a = 0; a<y.length; a++){
+                end[a] = x[a] + y[a];
+                temp2++;
+            }
+            for(int b = temp2+1; b<x.length; b++){
+                end[b] = y[b];
+            }
+         }
+         return end;
+  }//closes method
+        
+        
         
     
-    for(int row = 0; row < numbers1.length; row++){
-        int all = 0;
-        for(int j=0; j<numbers2[row].length; j++){
-            sum[] = numbers1[x] + numbers2[b];
-            return sum;
-        }
-    }
-        
-  }
-  
-  
   
 }//closes class
 
