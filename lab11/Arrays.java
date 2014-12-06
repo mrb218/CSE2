@@ -18,7 +18,7 @@ public class Arrays{
         for (int a=0; a<10; a++){
             numbers[a]=integers.nextInt();
         }
-            
+        
             int max = 0;
             int min = 0;
             
